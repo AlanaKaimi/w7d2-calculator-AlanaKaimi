@@ -1,0 +1,100 @@
+/* Worked through from https://freshman.tech/css-grid-calculator/ */
+
+/* This sets the margin and padding of every HTML element to zero and the box-sizing: border-box; declaration changes the box model by ensuring that the padding and border of an element no longer increases its width. */
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+/* absolutely center the calculator on the page and give it a border and fixed width. */
+ .calculator {
+     border: 1px solid #ccc;
+     border-radius: 35px;
+     position: absolute;
+     top: 50%;
+     left: 50%;
+     transform: translate(-50%, -50%);
+     width: 400px;
+ }
+
+ .calculator-screen {
+     width: 100%;
+     font-size: 5rem;
+     height: 80px;
+     border: none;
+     background-color: #252525;
+     color: #fff;
+     text-align: right;
+     padding-right: 20px;
+     padding-left: 10px;
+ }
+
+ button {
+    height: 60px;
+    background-color: #fff;
+    border-radius: 60px;
+    border: 10px solid #c4c4c4;
+    background-color: transparent;
+    font-size: 2rem;
+    color: #333;
+    background-image: linear-gradient(to bottom,transparent,transparent 50%,rgba(0,0,0,.04));
+    box-shadow: inset 0 0 0 1px rgba(255,255,255,.05), inset 0 1px 0 0 rgba(255,255,255,.45), inset 0 -1px 0 0 rgba(255,255,255,.15), 0 1px 0 0 rgba(255,255,255,.15);
+    text-shadow: 0 3px rgba(255,255,255,.4);
+  }
+  
+  button:hover {
+    background-color: #eaeaea;
+    transform: skew(75deg);
+    box-shadow: 50px 50px black;
+  }
+
+  /* .btn.active {
+      background-color: rgb(236, 101, 101);
+      transform: scale(0.29);
+  } */
+  
+  .operator {
+    color: #337cac;
+  }
+  
+  .all-clear {
+    background-color: #f0595f;
+    border-color: #b0353a;
+    color: #fff;
+  }
+  
+  .all-clear:hover {
+    background-color: #f17377;
+  }
+  
+  .equal-sign {
+    background-color: #2e86c0;
+    border-color: #337cac;
+    color: #fff;
+    height: 100%;
+    grid-row: 2 / 6;
+    grid-column: 4 / 5;
+    box-shadow: -3px 3px black;
+  }
+  
+  .equal-sign:hover {
+    background-color: #4e9ed4;
+  } 
+
+  /* rows and columns for a grid container */
+  .calculator-keys {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      /* add some space between the butttons */
+      grid-gap: 20px;
+      /* or use:
+      grid-row-gap: 20px;
+      grid-column-gap: 20px; */
+      padding: 20px
+  }
