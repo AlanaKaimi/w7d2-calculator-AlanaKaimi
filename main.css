@@ -12,8 +12,11 @@ html {
     box-sizing: inherit;
 }
 
+
+
 /* absolutely center the calculator on the page and give it a border and fixed width. */
  .calculator {
+     background-image: radial-gradient(rgb(8, 134, 4), rgb(73, 72, 72));
      border: 1px solid #ccc;
      border-radius: 35px;
      position: absolute;
@@ -29,10 +32,14 @@ html {
      height: 80px;
      border: none;
      background-color: #252525;
-     color: #fff;
+     color: rgb(9, 156, 33);
      text-align: right;
      padding-right: 20px;
      padding-left: 10px;
+ }
+
+ .calculator-screen:hover {
+     transform: rotate(-45deg);
  }
 
  button {
@@ -40,20 +47,21 @@ html {
     background-color: #fff;
     border-radius: 60px;
     border: 10px solid #c4c4c4;
-    background-color: transparent;
+    /* background-color: transparent; */
     font-size: 2rem;
     color: #333;
     background-image: linear-gradient(to bottom,transparent,transparent 50%,rgba(0,0,0,.04));
     box-shadow: inset 0 0 0 1px rgba(255,255,255,.05), inset 0 1px 0 0 rgba(255,255,255,.45), inset 0 -1px 0 0 rgba(255,255,255,.15), 0 1px 0 0 rgba(255,255,255,.15);
-    text-shadow: 0 3px rgba(255,255,255,.4);
+    transform: matrix(0.586,0.8,-0.8,0.586,40,10);
   }
   
   button:hover {
-    background-color: #eaeaea;
+    background-color: #bd0fbd;
     transform: skew(75deg);
     box-shadow: 50px 50px black;
   }
 
+  /* needs some more complex css/javascript for active features */
   /* .btn.active {
       background-color: rgb(236, 101, 101);
       transform: scale(0.29);
@@ -61,12 +69,15 @@ html {
   
   .operator {
     color: #337cac;
+    font-style: bold;
+    transform: matrix(0.866,0.6,-0.8,0.866,0,0);
   }
   
   .all-clear {
     background-color: #f0595f;
-    border-color: #b0353a;
+    border-color: #ac0474;
     color: #fff;
+    transform: matrix(0.586,0.8,-0.8,0.866,0,0);
   }
   
   .all-clear:hover {
@@ -74,17 +85,19 @@ html {
   }
   
   .equal-sign {
-    background-color: #2e86c0;
+    background-color: #e79213;
     border-color: #337cac;
     color: #fff;
     height: 100%;
     grid-row: 2 / 6;
-    grid-column: 4 / 5;
+    grid-column: 2 / 4;
     box-shadow: -3px 3px black;
+    transform: matrix(0.586,-0.8,0.8,0.866,0,0);
   }
   
   .equal-sign:hover {
     background-color: #4e9ed4;
+    transform: rotate(90deg);
   } 
 
   /* rows and columns for a grid container */

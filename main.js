@@ -1,7 +1,7 @@
 // Worked through tutorial here: https://freshman.tech/calculator/
 
 const calculator = {
-    displayValue: '0',
+    displayValue: 'my handle on JS...',
     firstOperand: null,
     waitingForSecondOperand: false,
     operator: null,
